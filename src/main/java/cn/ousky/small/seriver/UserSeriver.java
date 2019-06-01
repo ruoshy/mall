@@ -44,7 +44,7 @@ public class UserSeriver {
         // 写入验证码存在3分钟
         redisTemplate.opsForValue().set(phone, code, 3, TimeUnit.MINUTES);
         SimpleMailMessage smessage = new SimpleMailMessage();
-        smessage.setFrom("2018115248@qq.com");
+        smessage.setFrom("xxxxxxxxx@qq.com");
         smessage.setTo(phone);
         smessage.setSubject("验证码");
         smessage.setText("验证码：" + code + "，有效期三分钟。");
